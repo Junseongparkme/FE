@@ -1,0 +1,107 @@
+#container {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin: auto;
+}
+
+h1 {
+    text-decoration: underline;
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+#box-1 {
+    background-color: #545554;
+    color: #FFF;
+    padding: 20px;
+    padding-top: 5px;
+    border: 5px solid red;
+}
+
+#box-2 {
+    border: 2px dotted #000000;
+    margin-top: 30px;
+    padding: 20px;
+    color: rgb(83, 83, 83);
+}
+
+#box-3 {
+    padding: 20px;
+    border: 1px solid #7c7c7c;
+    margin-top: 30px;
+}
+
+#box-3 h2 {
+    text-align: center;
+}
+
+#box-3 ul {
+    padding-left: 15px;
+
+}
+
+#box-3 li {
+    list-style: none;
+    color: black;
+    list-style-image: url('../images/check.png');
+    margin-bottom: 5px;
+}
+
+#box-3 li a {
+    text-decoration: none;
+}
+
+#box-3 li a:hover {
+    color: rgb(174, 250, 212);
+}
+
+#box-3 li a:active {
+    color: red;
+}
+
+#box-3 li a:visited {
+    color: purple;
+}
+
+form {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+label {
+    display: block;
+}
+
+form input[type="text"] , form input[type="number"], form input[type="email"], form input[type="date"], form textarea{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+form input[type="submit"] {
+    background-color: black;
+    color: white;
+}
+
+form input[type="submit"]:hover {
+    background-color: red;
+    color: black;
+    font-weight: bold;
+}
+
+#box-4 {
+    margin-top: 30px;
+}
+
+#box-4 .stack {
+    float: left;
+    border: 1px solid #b6b6b6;
+    width: 33.3%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+
+#space {
+    height: 500px;
+}
