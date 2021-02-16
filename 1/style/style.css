@@ -102,6 +102,31 @@ form input[type="submit"]:hover {
     padding: 5px;
 }
 
-#space {
-    height: 500px;
+#clr {
+    clear: both;
+}
+
+#box-5 {
+    margin-top: 30px;
+    border: solid 1px black;
+    height: 400px;
+    position: relative;
+    background-image: url('../images/background.jpg');
+    background-position: center 15%;
+
+}
+
+#box-5 h2 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: black;
+    font-weight: 900;
+    font-size: 3em;
+}
+
+#box-5 h3 {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
 }
