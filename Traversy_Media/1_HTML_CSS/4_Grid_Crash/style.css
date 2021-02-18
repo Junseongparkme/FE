@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    grid-auto-rows: minmax(40px, auto);
+}
+
+.container div:nth-child(odd) {
+    background-color: blueviolet;
+    color: white;
+}
+
+.container div:nth-child(even) {
+    background-color: rgb(198, 255, 64);
+}
