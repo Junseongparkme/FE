@@ -1,0 +1,34 @@
+@media (min-width: 768px) {
+    .container-1 {
+        display: flex;
+    }
+    .container-2 {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+
+.container-1 div, .container-2 div {
+    border: 1px solid black;
+}
+
+.box-1 {
+    flex: 2;
+    order: 2;
+}
+
+.box-2 {
+    flex: 1;
+    order: 1;
+}
+
+.box-3 {
+    flex: 1;
+    order: 3;
+}
+
+.container-2 div {
+    flex-basis: 20%;
+}
