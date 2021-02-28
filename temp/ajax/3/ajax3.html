@@ -6,6 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AJAX 3 - External API</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        .user div {
+            background-color: rgb(234, 247, 213);
+            padding: 10px;
+            padding-top: 0;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,6 +26,37 @@
     <br><br>
     <h1>Github Users</h1>
     <div id="users"></div>
+
+    <script>
+        document.querySelector('#button').addEventListener('click', loadUsers);
+
+        function loadUsers() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.github.com/users', true);
+
+            var output = `<ul>`;
+
+            xhr.onload = function() {
+                if (this.status == 200) {
+                    var json = JSON.parse(this.responseText);
+                    console.log(json)
+                    for(var i in json) {
+                        output += `
+                        <li class="user">
+                            <div>
+                                <h2> Name : ${json[i].login}</h2>
+                                <img src=${json[i].avatar_url} width="100px">
+                            </div>
+                        </li>`
+                    }
+                    output += `</ul>`
+                    document.querySelector('#users').innerHTML = output;
+                }
+            }
+            xhr.send();
+        }
+        
+    </script>
 </body>
 
 </html>
