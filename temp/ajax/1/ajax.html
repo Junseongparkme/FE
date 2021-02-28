@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX 1 - Text File</title>
+</head>
+
+<body>
+    <div id="div"></div>
+    <button id="button">Get Text</button>
+    <script>
+        document.querySelector('#button').addEventListener('click', getText);
+        
+        function getText() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', 'samplez.txt', true);
+
+            xhr.onprogress = function () {
+                console.log('Loading...');
+            }
+
+            xhr.onload = function () {
+                if (this.status == 200) {
+                    document.querySelector('#div').innerHTML = this.responseText;
+                } else if (this.stastus == 404) {
+                    document.querySelector('#div').innerHTML = 'Not Found';
+                }
+            }
+
+            // xhr.onreadystatechange = function () {
+            //     console.log(xhr.readyState)
+            //     if (xhr.status == 200 && xhr.readyState == 4) {
+            //         console.log(xhr.readyState);
+            //     }
+            // }
+            
+            xhr.onerror = function () {
+                console.error('Error occured');
+            }
+
+            xhr.send();
+        }
+    </script>
+</body>
+
+</html>
